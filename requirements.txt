@@ -1,0 +1,5 @@
+openai==0.27.8
+csv
+datetime
+elasticsearch==1.26.14
+streamlit==1.24.1
