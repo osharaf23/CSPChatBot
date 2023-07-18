@@ -1,0 +1,25 @@
+Query,Fatemeh's Comments:
+How many security events have I had in the past week?,"This might be vague a bit, we need to know what is the defitnition of secuirty event, is there a threahsold for it?"
+Which users have sent DNS queries?,"Question could be, how many devices in the network have been active. Then we need to match the device with mac_address in the prompt. "
+Where have the most queries come from?,
+How many queries were successful?,This means rcode!=3
+How many devices do we have dhcp_Fignerprint for?,
+What is the average of time devices change IP address,This is a complex one. 
+What are the top 3 most frequent device type in my network,This would be PM's favourite question
+What is the percentage of queries with qtype=1,
+Which product has the most queries in the past 10 days? ,define product==pname for the model. 
+Can you provide a breakdown of DNS query types and their respective query rates?,
+On average how many DNS queries have we had each week over the past month?,
+What percentage of queries have been successful?,
+What domains had the most queries?,
+What second level domains had the most queries?,
+Which domains have had the highest DNS query success rates?,
+Which domains have had the highest DNS query fail rates?,
+How many unique IP addresses in the network in the past two days,
+How many queries have google.com as their slds. ,
+What is the most frequent domain category?,
+what precentage of DNS queries have device_country,
+What percentage of queries are comming from United States?,
+How many queries had threat indicators?,
+What was the most common threat indicator in the past 2 weeks?,
+What is the longest expiration of the queries in the past 2 days?,
