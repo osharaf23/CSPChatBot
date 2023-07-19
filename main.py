@@ -9,7 +9,7 @@ from langchain.chat_models import AzureChatOpenAI
 from langchain.schema import HumanMessage
 from elasticsearch import Elasticsearch, RequestsHttpConnection
 import streamlit as st
-from es_test import test, save_to_csv
+# from es_test import test, save_to_csv
 
 openai.api_type="azure"
 openai.api_version =  "2023-03-15-preview"
@@ -214,6 +214,9 @@ def test(prompt):
 
   results.append(query_body)
 
+  if query_body[0] != '{':
+    return results
+
   content2 = """
   "You are a chatbot designed to take in a json string that is the output of an elastic search query and translate it into a human readable value. \
   You must figure out what output type (for example, an integer, a string, a list of strings, etc.) the user is looking for based on the query \
@@ -271,20 +274,26 @@ with user_input:
 
 if input_val:
 
-    results = test(input_val)
-    # print(results)
+  results = test(input_val)
+  # print(results)
 
+  if results[1][0] == '{':
     with llm_out:
-        st.header('LLM Output (user prompt -> ES query)')
-        st.write(results[1])
+      st.header('LLM Output (user prompt -> ES query)')
+      st.write(results[1])
 
     with es_out:
-        st.header('ES Output (ES query -> ES response)')
-        st.write(results[2])
+      st.header('ES Output (ES query -> ES response)')
+      st.write(results[2])
 
 
     with hr_out:
-        st.header('Human Readable Output (ES response -> Human Readable response)')
-        st.write(results[3])
+      st.header('Human Readable Output (ES response -> Human Readable response)')
+      st.write(results[3])
 
     save_to_csv([results], 'es-llm-data.csv')
+
+  else:
+    with llm_out:
+      st.header('LLM Output (user prompt -> ES query)')
+      st.write(results[1])

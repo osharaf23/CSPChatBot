@@ -1,5 +1,5 @@
 openai==0.27.8
-csv
+csv==0.0.13
 datetime
 elasticsearch==1.26.14
 streamlit==1.24.1
