@@ -1,12 +1,9 @@
 
-import requests
 import openai
-import os
 import csv
-import sys
 from datetime import date
-from langchain.chat_models import AzureChatOpenAI
-from langchain.schema import HumanMessage
+# from langchain.chat_models import AzureChatOpenAI
+# from langchain.schema import HumanMessage
 from elasticsearch import Elasticsearch, RequestsHttpConnection
 import streamlit as st
 # from es_test import test, save_to_csv
