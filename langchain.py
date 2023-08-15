@@ -191,8 +191,7 @@ class Chatbot:
 
         Make sure you address all parts of the user's inputted prompt before returning the query.\
 
-        Return only the json code part of the answer. Even if the user is asking a follow-up question, do not explain your answer, only \
-        output the json code part of the answer. Compress the json output removing spaces and output only this compressed json script. Double check \
+        Return only the json code part of the answer. Compress the json output removing spaces and output only this compressed json script. Double check \
         your query ahs the same amount of close brackets as open brackets. If there is an imbalance double check the syntax." \
         """
     
